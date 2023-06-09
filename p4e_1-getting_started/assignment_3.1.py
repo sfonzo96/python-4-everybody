@@ -4,20 +4,20 @@
 # You should use input to read a string and float() to convert the string to a number.
 # Do not worry about error checking the user input - assume the user types numbers properly.
 
-#hour = input("Enter Hours:")
-#rate = input("Enter Rate:")
+hour = input("Enter Hours:")
+rate = input("Enter Rate:")
 
-##payment = 0
+payment = 0
 
-# try:
-#     hs = float(hour)
-#     rt = float(rate)
-#     if hs > 40:
-#        payment = 40 * rt + (hs - 40) * rt * 1.5
-#     else:
-#         payment = hs * rt
-# except:
-#     print("Error, please enter numeric input")
-#     quit()
+try:
+    hs = float(hour)
+    rt = float(rate)
+    if hs > 40:
+       payment = 40 * rt + (hs - 40) * rt * 1.5
+    else:
+        payment = hs * rt
+except:
+    print("Error, please enter numeric input")
+    quit()
     
-# print(payment)
+print(payment)
