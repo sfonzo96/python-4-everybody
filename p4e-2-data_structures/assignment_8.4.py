@@ -13,8 +13,10 @@ romeoHandler = open(fileName)
 wordsList = list()
 
 for line in romeoHandler:
+    # Generates a list of words for each line
     wordsAtLine = line.rstrip().split()
 
+    # Adds words to the wordsList without repeating
     for word in wordsAtLine:
         if (word not in wordsList): wordsList.append(word)
 

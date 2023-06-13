@@ -13,6 +13,7 @@ fileHandler = open(fileName)
 floats = list()
 
 for line in fileHandler:
+    # Operates only with the lines that starts with 'X-DSPAM-Confidence'
     if not line.startswith('X-DSPAM-Confidence'): continue
     floats.append(line.rstrip().split()[1])
 

@@ -15,12 +15,21 @@ hours = dict()
 for line in fileHandler:
     if line.startswith('From '):
         words = line.rstrip().split()
-        time = next((datetime for datetime in words if ':' in datetime), None)
-        if time is not None: 
-            hour = time.split(':')[0]
-            hours[hour] = hours.get(hour, 0) + 1
-        else:
-            continue
+
+        time = None
+        for word in words:
+            if ':' in word: time = word
+            
+        hour = time.split(':')[0]
+        hours[hour] = hours.get(hour, 0) + 1
+
+        # Alternative using next() function: Returns an element (a string) of the words array if it includes ':', defaults to None
+        # time = next((datetime for datetime in words if ':' in datetime), None)
+        # if time is not None: 
+        #     hour = time.split(':')[0]
+        #     hours[hour] = hours.get(hour, 0) + 1
+        # else:
+        #     continue
 
 for hour,count in sorted(hours.items()):
     print(hour, count)

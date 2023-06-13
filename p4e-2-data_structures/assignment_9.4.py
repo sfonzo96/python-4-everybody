@@ -21,7 +21,7 @@ try:
     for sender in senders:
         if moreOftenSender is None or senders[sender] > senders[moreOftenSender]: moreOftenSender = sender
 
-    # Using items() method
+    # Alternative using items() method
     # times = -1
     # for sender,count in senders.items():
     #     if moreOftenSender is None or count > times: 

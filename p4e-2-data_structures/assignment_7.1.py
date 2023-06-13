@@ -7,7 +7,9 @@ You can download the sample data at http://www.py4e.com/code3/words.txt
 fileName = input('Enter a file name: ')
 
 try:
+    # Makes the file available
     fileHandler = open(fileName)
+    # Reads the data in the file and stores it all in one string
     content = fileHandler.read().rstrip()
     print(content.upper())
 except:
